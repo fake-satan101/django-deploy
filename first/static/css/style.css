@@ -1,0 +1,11 @@
+h1{
+  color: violet;
+},
+table,th,td{
+  border-radius: 50%;
+  border: 2px solid blue;
+  color: green;
+}
+.form{
+  margin-left: 1em; 
+}

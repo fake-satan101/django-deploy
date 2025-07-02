@@ -1,0 +1,28 @@
+{% extends 'first_app/base.html' %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {% block body_block %}
+    <div class="jumbotron">
+
+        <form action="{% url 'first_app:login' %}" method="post">
+          {% csrf_token %}
+          <label for="username">Username:</label>
+          <input type="text" name="username">
+          <label for="password">Password:</label>
+          <input type="password" name="password">
+          <input type="submit" name="submit" value="Login">
+
+
+        </form>
+
+
+
+    </div>
+    {% endblock %}
+  </body>
+</html>

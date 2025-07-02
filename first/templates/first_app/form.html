@@ -1,0 +1,17 @@
+{% extends 'first_app/base.html'%}
+
+    {% block body_block %}
+    {% if registered %}
+    Thanks for registering
+    {% else %}
+      <div class="mb-3">
+    <form enctype="multipart/form-data" method="post" class="form">
+      {% csrf_token %}
+        {{form.as_p}}
+        {{profile.as_p}}
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    </div>
+    {% endif %}
+    {{msg}}
+    {% endblock %}

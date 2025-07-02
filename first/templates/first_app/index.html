@@ -1,0 +1,26 @@
+{% extends "first_app/base.html" %}
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href={%static "css/style.css" %}>
+
+    <title></title>
+  </head>
+  <body>
+    {% block body_block %}
+  {% if user.is_authenticated %}
+  <h1>Welcome {{user.username}}</h1>
+  {% else %}
+  <h1>Welcome to the site!</h1>
+  {% endif %}
+    <img src={%static "images/download.webp" %}/>
+    <h1 class="h1"></h1>
+    <h1>Hi</h1>
+
+    {% endblock %}
+
+  </body>
+</html>
